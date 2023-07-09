@@ -1,0 +1,17 @@
+{%extends 'base.html' %}
+{% block body %}
+
+
+<div style="min-height:70vh" >
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body" >
+      <p class="card-text">Firstname:&nbsp;&nbsp;{{det.user.first_name }}</p>
+      <p class="card-text">Lastname:&nbsp;&nbsp;{{det.user.last_name }}</p>
+      <p class="card-text">Username:&nbsp;&nbsp;{{det.user.username }}</p>
+      <p class="card-text">Address:&nbsp;&nbsp;{{det.address }}</p> 
+      <p class="card-text">Contact Number:&nbsp;&nbsp;{{det.phone }}</p> 
+      <p class="card-text">Email:&nbsp;&nbsp;{{det.user.email }}</p>
+      
+  </div>
+
+{% endblock %}

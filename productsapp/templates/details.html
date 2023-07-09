@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container" style="background-color:white; margin-left:380px;width:560px;">
+    
+    <img src={{product.image.url}} style="height: 320px;margin-left:150px;">
+    <div style="margin-left:180px;">
+    <h5> {{product.name}}</h5>
+    <h5>${{product.price}}</h5>
+    <h5>{{product.description}}</h5>
+    {% if product.stock <= 0 %}
+    <p><b>out of stock</b></p>
+    {% else %}
+    <a class="btn btn-primary" href="{% url 'cart:add_cart' product.id %}">Add to cart</a>
+    {% endif %}
+
+
+
+
+    {% comment %} <a href="{% url 'cart:add_cart' product.id  %}" class="btn btn-primary">Add to cart</a> {% endcomment %}
+</div>
+    </div>
+{% endblock %}

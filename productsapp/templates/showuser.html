@@ -1,0 +1,42 @@
+{% extends 'baseadmin.html' %}
+{% block body %}
+<table  class="table text-center ">
+    <h2 align="center">Details</h2>
+  
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+       
+        <th>Email</th>
+        
+        <th>Address</th>
+        <th>Phone Number</th>
+        
+       
+        <th>Action</th>
+    </tr>
+    {% for p in det %}
+   <tr>
+        <td>{{p.user.first_name}}</td>
+        <td>{{p.user.last_name}}</td>
+        <td>{{p.user.username}}</td>
+        <td>{{p.user.email}}</td>
+        <td>{{p.address}}</td>
+        <td>{{p.phone}}</td>
+        
+       
+   
+       <td>
+         
+        <a href="{% url 'deleteuser' p.id %}"class="btn btn-danger" >Delete</a></td>
+        
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+{% endblock %}
